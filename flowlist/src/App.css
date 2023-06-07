@@ -54,8 +54,7 @@ display: block;
 }
 
 li{
- 
-  display: block;
+
   margin: 0 auto;
   margin-top: 10px;
   padding-top: 10px;
@@ -67,15 +66,17 @@ li{
   text-shadow: 2px 2px 2px #140905;
   border: 1px solid rgba(43,41,49,0.42);
 border-radius: 7px;
-width: 370px;
+width: 380px;
+
+  display: flex;
+  justify-content:end
 
 }
 
-.li_Buttons{
 
- justify-self: end;
- 
-}
+
+
+
 
 
 

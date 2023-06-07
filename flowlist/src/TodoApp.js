@@ -12,15 +12,25 @@ function TodoApp() {
     const addTodos = inputValue =>{
         const updatedTodos = [...todos, { text: inputValue }];
         setTodos(updatedTodos)
+      // saving todos in the localstorage
+        localStorage.setItem("todos", JSON.stringify(updatedTodos));
         
     }
+    // retriving todos from the local storage
+    React.useEffect(() => {
+    const storedTodos = localStorage.getItem("todos");
+    if (storedTodos) {
+    setTodos(JSON.parse(storedTodos));
+    }
+    }, []);
+
 
     const removeElement = (event) => {
 
     var target = event.currentTarget;
       var parent = target.parentElement
       parent.remove();
-
+  
   
 };
 
